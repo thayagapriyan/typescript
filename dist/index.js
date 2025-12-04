@@ -1,6 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // src/index.ts
+import { curry } from "./curry";
 function greet(name) {
     console.log(`Hello, ${name}!`);
 }
