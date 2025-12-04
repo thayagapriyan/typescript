@@ -1,13 +1,10 @@
 import { defineConfig } from 'vite';
+import devServer from '@hono/vite-dev-server';
 
 export default defineConfig({
-  server: {
-    proxy: {
-      // Proxy API calls during dev to the Hono server running on port 3000
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true
-      }
-    }
-  }
+  plugins: [
+    devServer({
+      entry: 'src/index.ts',
+    }),
+  ],
 });

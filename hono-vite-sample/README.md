@@ -1,22 +1,22 @@
-# Hono + Vite sample
+# Hono + Vite Sample
 
-This sample runs a Hono backend on port 3000 and a Vite dev server that proxies `/api` requests to the backend.
+This sample runs a Hono backend application on the Vite development server using the `@hono/vite-dev-server` plugin.
 
-Setup:
+## Setup
 
 1. Install dependencies:
+   ```sh
    npm install
+   ```
 
-2. Run development servers (Hono + Vite):
+2. Start the development server:
+   ```sh
    npm run dev
+   ```
 
-- Vite dev server runs (by default) at http://localhost:5173
-- Hono server runs at http://localhost:3000
-- The Vite dev server proxies /api -> http://localhost:3000 so frontend fetch('/api/hello') works during dev.
+The Vite dev server runs at http://localhost:5173 (by default).
 
-Build for production:
+## API Endpoints
 
-1. Build:
-   npm run build
-
-2. Build will emit frontend assets via Vite and compile TypeScript to `dist/` (server). You'll need to set up a production server script that serves built assets and runs the server bundle.
+- `GET /` - Returns "Hono server is running"
+- `GET /hello` - Returns "Hello, World!"
