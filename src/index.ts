@@ -1,9 +1,9 @@
-// src/index.ts
-import { curry } from "./curry";
+import { Hono } from 'hono'
 
-function greet(name: string): void {
-    console.log(`Hello, ${name}!`);
-}
+const app = new Hono()
 
-const userName: string = "TypeScript User";
-greet(userName);
+app.get('/', (c) => {
+  return c.json({ message: 'Hello from Hono!' })
+})
+
+export default app
