@@ -1,0 +1,21 @@
+{
+  "name": "hono-vite-sample",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"vite\"",
+    "server:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc && vite build",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "hono": "^3.6.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "typescript": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
+    "concurrently": "^8.0.0"
+  }
+}
